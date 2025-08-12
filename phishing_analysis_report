@@ -15,14 +15,24 @@ Red flag: Domain msupdate.net` is suspicious and could be designed to look relat
 
 ---
 
-2. Email Content & Urgency
+2.Header Analysis
+
+SPF: Failed — sending IP not authorized for msupdate.net.
+DKIM: Missing — no cryptographic signature.
+DMARC: Failed — email violates sending domain’s authentication policy.
+IP: 203.0.113.45 — not associated with Microsoft.
+Domain mismatch: msupdate.net instead of microsoft.com
+
+---
+
+3. Email Content & Urgency
 
 The email claims **your Microsoft password was changed.
 It urges you to act immediately if this wasn't you → common urgency tactic in phishing.
 
 ---
 
-3. Suspicious Links
+4. Suspicious Links
 
 The text includes links like **"Reset your password" and "Review your security info".
 Without clicking, hovering would likely reveal a non-Microsoft domain redirecting to a fake login page.
@@ -30,39 +40,40 @@ Red flag: Microsoft password reset links should always lead to login.live.com or
 
 ---
 
-4. Email Personalization
+5. Email Personalization
 
 No greeting with your real name.
 Refers to "your account" instead of identifying it fully → a typical phishing pattern to make it generic.
 
 ---
 
-5. Technical Clues
+6. Technical Clues
 
 IP address provided: 77.196.86.10 — could be a fabricated detail to make the email look legitimate.
 Includes details like Country, Platform, Browser — these are meant to make the email seem credible but can be fake.
 
 ---
 
-6. Grammar & Formatting
+7. Grammar & Formatting
 
 No major spelling mistakes, but formatting is overly simplistic compared to official Microsoft security alerts.
 Official emails usually contain branded headers, consistent styling, and copyright footer.
 
 ---
 
-7. Mismatched Domain & Branding
+8. Mismatched Domain & Branding
 
 Email claims to be Microsoft but domain is unrelated.
 No official Microsoft logo or secure email footer.
 
 ---
 
-8. Overall Verdict
+9. Overall Verdict
 
 ⚠ Phishing attempt.
 
 -Domain spoofing (`msupdate.net`).
+-Suspicious Email Header
 -Urgency + account compromise scare tactic.
 -Likely malicious links masked under legitimate-looking text.
 -Generic greeting & suspicious formatting.
